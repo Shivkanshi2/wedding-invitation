@@ -1,0 +1,147 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fae1dc;
+    overflow: hidden;
+    position: relative;
+    background-image: url('ganesh.jpg'); /* Replace with your Lord Ganesh image */
+    background-size: cover;
+    background-position: center;
+    animation: moveBackground 30s infinite linear; /* Motion effect */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Motion Effect for Background Image */
+@keyframes moveBackground {
+    0% {
+        background-position: center;
+    }
+    50% {
+        background-position: top left;
+    }
+    100% {
+        background-position: center;
+    }
+}
+
+/* Main Invitation Container */
+.invitation-container {
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    border: 5px solid #ff66b2; /* Decorative border */
+    z-index: 2; /* Ensures content stays above the background */
+}
+
+/* Image Styling with Rotation */
+.name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.groom-img, .bride-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 15px;
+    border: 5px solid #ff66b2; /* Colorful border */
+    animation: rotateImage 10s linear infinite;
+}
+
+@keyframes rotateImage {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Main Title Styling with Motion Effect */
+.main-title {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 4em;
+    color: #db7093;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(0, 255, 0, 0.7), 0 0 15px rgba(0, 0, 255, 0.7);
+    letter-spacing: 2px;
+    animation: slideIn 2s ease-out forwards, glowEffect 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(0, 255, 0, 0.7), 0 0 15px rgba(0, 0, 255, 0.7);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 30px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 0, 255, 1);
+    }
+}
+
+/* Details Styling with Multi-Color Animation */
+.details p {
+    font-size: 1.2em;
+    margin: 15px 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.details .highlight {
+    font-weight: bold;
+    display: inline-block;
+    animation: colorChange 5s linear infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff66b2;
+    }
+    25% {
+        color: #ff6347;
+    }
+    50% {
+        color: #32cd32;
+    }
+    75% {
+        color: #1e90ff;
+    }
+    100% {
+        color: #db7093;
+    }
+}
+
+/* Footer Message */
+.footer {
+    margin-top: 30px;
+}
+
+.invitation-message {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 20px;
+    font-weight: bold;
+}
